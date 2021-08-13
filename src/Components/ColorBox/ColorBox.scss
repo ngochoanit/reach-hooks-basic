@@ -1,0 +1,9 @@
+.ColorBox {
+    margin-top: 50px;
+    .box {
+        display: inline-block;
+        width: 200px;
+        height: 200px;
+        transition: all 0.2s ease;
+    }
+}
