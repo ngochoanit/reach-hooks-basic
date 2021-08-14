@@ -1,0 +1,30 @@
+.todo {
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    width: 500px;
+    margin: 10px auto;
+    .todoList {
+        list-style: none;
+        text-align: left;
+        padding-left: 0px;
+        margin: 0px;
+        &-inputText {
+            display: inline-block;
+            width: 100%;
+            border: none;
+            border-bottom: 1px solid #ccc;
+            margin: 0 auto;
+            padding: 10px 10px;
+            outline: none;
+            font-size: 16px;
+            box-sizing: border-box;
+        }
+        &-item {
+            padding: 10px 10px;
+            cursor: pointer;
+        }
+        &-item ~ .todoList-item {
+            border-top: 1px solid #ccc;
+        }
+    }
+}

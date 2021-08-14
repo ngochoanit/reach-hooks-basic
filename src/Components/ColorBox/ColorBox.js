@@ -9,7 +9,7 @@ ColorBox.propTypes = {
 };
 
 function ColorBox(props) {
-    //initialColor
+    //initialColor state
     const initialColor = () => {
         return localstored.get() || COLOR_ARR[0]
     }
