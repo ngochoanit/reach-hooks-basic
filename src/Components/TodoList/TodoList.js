@@ -40,11 +40,12 @@ function TodoList(props) {
     }
     return (
         <div className="todo">
+            <h3 className="todoList-header">Todo list</h3>
             <ul className="todoList">
                 <input
                     type="text"
                     className="todoList-inputText"
-                    placeholder="new item"
+                    placeholder="new item..."
                     value={title}
                     onChange={handleInputChange}
                     onKeyUp={addNewItem}

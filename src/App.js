@@ -1,5 +1,6 @@
 import './App.scss';
 import ColorBox from './Components/ColorBox/ColorBox';
+import PostList from './Components/PostList/PostList';
 import TodoList from './Components/TodoList/TodoList';
 
 function App() {
@@ -7,6 +8,7 @@ function App() {
     <div className="App">
       <ColorBox></ColorBox>
       <TodoList></TodoList>
+      <PostList></PostList>
     </div>
   );
 }

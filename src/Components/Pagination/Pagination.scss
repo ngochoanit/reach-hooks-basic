@@ -1,0 +1,35 @@
+.pagination-box {
+    border-top: 1px solid #ccc;
+    .pagination {
+        display: flex;
+        list-style: none;
+        justify-content: flex-end;
+        padding: 0;
+        & li {
+            & a {
+                display: block;
+                border: 1px solid red;
+                padding: 10px 10px;
+                margin: 0 10px;
+                cursor: pointer;
+            }
+            &.break-me a {
+                cursor: default;
+                border: none;
+            }
+            &.disabled {
+                color: #999;
+
+                & a {
+                    cursor: default;
+                }
+            }
+            &.active {
+                color: red;
+                & a {
+                    cursor: default;
+                }
+            }
+        }
+    }
+}
