@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 import './PostList.scss'
 import { getPostList } from '../../Apis/Apis';
 import Pagination from '../Pagination/Pagination';
+import PostFilterForm from '../PostFilterForm/PostFilterForm';
 
 PostList.propTypes = {
 
@@ -19,6 +20,7 @@ function PostList(props) {
     const [filter, setFilter] = useState({
         _limit: 5,
         _page: 1,
+        title_like: ''
     })
     useEffect(() => {
         try {
@@ -36,9 +38,17 @@ function PostList(props) {
     const onPageChange = (newpage) => {
         setFilter({ ...filter, _page: newpage })
     }
+    const handleFilterChange = (newFilter) => {
+        setFilter({
+            ...filter,
+            _page: 1,
+            title_like: newFilter.searchTerm
+        })
+    }
     return (
         <div className="postList">
             <h3 className="postList-header">Post List</h3>
+            <PostFilterForm onSubmit={handleFilterChange}></PostFilterForm>
             <ul className="postList-wrap">{
 
                 postList.map((post) =>

@@ -1,0 +1,19 @@
+.postFilterForm {
+    display: block;
+    width: 100%;
+    border-bottom: 1px solid #ccc;
+    &-inputText {
+        display: inline-block;
+        outline: none;
+        border: none;
+        text-align: left;
+        padding: 10px 10px;
+        margin: 0 auto;
+        width: 100%;
+        box-sizing: border-box;
+        font-size: 16px;
+        :focus-visible {
+            border: none;
+        }
+    }
+}
