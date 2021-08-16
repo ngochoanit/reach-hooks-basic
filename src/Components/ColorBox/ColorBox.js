@@ -13,7 +13,6 @@ function ColorBox(props) {
     const initialColor = () => {
         return localstored.get() || COLOR_ARR[0]
     }
-    console.log(typeof initialColor)
     const [color, setColor] = useState(initialColor)
     const onChangeColor = () => {
         const index = Math.trunc(Math.floor(Math.random() * 4))
