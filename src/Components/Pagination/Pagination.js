@@ -17,7 +17,7 @@ function Pagination(props) {
     const totalPages = Math.ceil(_totalRows / _limit);
     const handleOnPageChange = (newpage) => {
         if (onPageChange) {
-            onPageChange(newpage.selected)
+            onPageChange(newpage.selected + 1)
         }
     }
     return (
